@@ -1,0 +1,14 @@
+1. В текущей директории подсчитать кол-во файлов с расширением .txt
+ls | grep -ic *.txt
+
+2. Написать скрипт, использующий cal выдать число (# дня)
+script -c cal;clear;cat typescript | grep "\[7m.." -o | sed 's/\[7m//g'; rm typescript
+
+3. Команда ping с результатом в res.txt и ошибками в err.txt
+ping -c 5 `cat ip.txt` > res.txt 2> err.txt
+
+4. Создать файл хранящий в себе список текущих процессов, которые начинаются на "r"
+ps aux | grep ":.. r.*" | grep -v grep
+
+5. Создать команду, копирующую тело файла в этот же файл
+echo "$(cat file.txt; cat file.txt)" > file.txt
